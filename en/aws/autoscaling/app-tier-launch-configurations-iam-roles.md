@@ -32,6 +32,6 @@
 15. In the left navigation panel, choose "Launch Template" and select the ASG launch configuration that need to modify.</br> <img src="/resources/aws/autoscaling/app-tier-launch-configurations-iam-roles/step15.png"/>
 16. On the "Launch Template" page, scroll down and click on the "Copy launch configuration" button.</br> <img src="/resources/aws/autoscaling/app-tier-launch-configurations-iam-roles/step16.png"/>
 17. On the "Create Launch Template" page, scroll down and select the "IAM instance profile" from the dropdown under the Additional configuration.</br> <img src="/resources/aws/autoscaling/app-tier-launch-configurations-iam-roles/step5.png"/>
-18. Click on the "Create launch template" button at the bottom to make the changes.</br> <img src="/resources/aws/autoscaling/app-tier-launch-configurations-iam-roles/step18.png"/>
-19. Repeat steps number 8 - 18 to update App-Tier Auto Scaling launch template and attach a customer created App-Tier IAM role.</br>
+18. Click on the "Create Launch Template" button at the bottom to make the changes.</br> <img src="/resources/aws/autoscaling/app-tier-launch-configurations-iam-roles/step18.png"/>
+19. Repeat steps number 8 - 18 to update App-Tier Auto Scaling Launch Template and attach a customer created App-Tier IAM role.</br>
 
