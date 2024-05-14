@@ -11,3 +11,12 @@
 | **AWS Link** | https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html |
 | **Recommended Action** | Associate an Amazon SNS topic to all CloudFormation stacks |
 ## Detailed Remediation Steps
+1. Log into the console.
+2. Ensure you are in the region with the failing test.
+3. Search services and find Cloudformation.![alt text](../../../resources/aws/cloudformation/search-cfn-service.png)
+4. Click on Stacks.![alt text](../../../resources/aws/cloudformation/click-stacks.png)
+5. Search for the offending stack.![alt text](../../../resources/aws/cloudformation/search-stack.png)
+6. In the stack details pane, choose Update.
+7. Select Use current template
+8. Click on notification options and a SNS topic where notifications will be sent on the stack. 
+9. When you are satisfied with your changes, choose Update stack.

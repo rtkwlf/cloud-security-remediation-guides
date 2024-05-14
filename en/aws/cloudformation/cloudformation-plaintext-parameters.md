@@ -15,7 +15,12 @@
 | **Recommended Action** | Update the sensitive parameters to use the NoEcho property. |
 
 ## Detailed Remediation Steps
-
-
-
-
+1. Log into the console.
+2. Ensure you are in the region with the failing test.
+3. Search services and find Cloudformation.![alt text](../../../resources/aws/cloudformation/search-cfn-service.png)
+4. Click on Stacks.![alt text](../../../resources/aws/cloudformation/click-stacks.png)
+5. Search for the offending stack.![alt text](../../../resources/aws/cloudformation/search-stack.png)
+6. In the stack details pane, choose Update.
+7. Select Use current template
+8. Add "NoEcho" to any lines with sensitive information. 
+9. When you are satisfied with your changes, choose Update stack.

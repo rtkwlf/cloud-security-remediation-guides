@@ -11,3 +11,7 @@
 | **AWS Link** | https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html |
 | **Recommended Action** | Check if CloudFormation is in use or not by observing the stacks |
 ## Detailed Remediation Steps
+1. Log into the console.
+2. Ensure you are in the region with the failing test.
+3. Search services and find Cloudformation.![alt text](../../../resources/aws/cloudformation/search-cfn-service.png)
+4. Click on Stacks.![alt text](../../../resources/aws/cloudformation/click-stacks.png)
