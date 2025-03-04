@@ -11,7 +11,7 @@
 | **Category** | Microsoft Entra ID |
 | **Description** | Ensures that all Azure passwords require symbol characters |
 | **More Info** | Azure handles most password policy settings, including which character types are required. Azure requires 3 out of 4 of the following character types: lowercase, uppercase, special characters, and numbers. |
-| **AZURE Link** | hhttps://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts |
+| **AZURE Link** | https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-policy#password-policies-that-only-apply-to-cloud-user-accounts |
 | **Recommended Action** | No action necessary. Azure handles password requirement settings. |
 
 ## Detailed Remediation Steps
