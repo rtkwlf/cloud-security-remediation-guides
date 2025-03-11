@@ -16,6 +16,14 @@
 
 ## Detailed Remediation Steps
 
+1. Log into the Microsoft Azure Management Console.
+2. In the top search bar, search for "Alerts" and select "Alerts" from the results.
+3. Click on "Manage alert rules" from the top panel.
+4. Click "New alert rule" to create a new rule.
+5. Under "Resources", click "Select", search for "Network Security Groups", and select the appropriate NSG Resource.
+6. Under "Condition", click "Add", search for "Administrative Category", and select "Create or Update Network Security Group Rule" then "Delete Network Security Group Rule". Click "Done".
+7. Under "Actions", select an existing "Action group" or click "Create action group" to configure email or other notifications.
+8. Provide an Alert rule name, enable "Yes" under "Enable rule upon creation", and click "Create alert rule" to finalize.
 
 
 
