@@ -6,7 +6,7 @@
 
 | | |
 |-|-|
-| **Plugin Title** | Big Table Labels Added |
+| **Plugin Title** | BigTable Instance Labels Added |
 | **Cloud** | GOOGLE |
 | **Category** | BigTable |
 | **Description** | Ensure that all BigTable instances have labels added. |
