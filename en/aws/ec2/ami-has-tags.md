@@ -6,7 +6,7 @@
 
 | | |
 |-|-|
-| **Plugin Title** | AMI have Tags |
+| **Plugin Title** | AMI has Tags |
 | **Cloud** | AWS |
 | **Category** | EC2 |
 | **Description** | Ensure that AMIs have tags |
