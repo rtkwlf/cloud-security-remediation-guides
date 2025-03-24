@@ -6,7 +6,7 @@
 
 | | |
 |-|-|
-| **Plugin Title** | IAM Roles Has Tags |
+| **Plugin Title** | IAM Role Has Tags |
 | **Cloud** | AWS |
 | **Category** | IAM |
 | **Description** | Ensure that AWS IAM Roles have tags associated. |
