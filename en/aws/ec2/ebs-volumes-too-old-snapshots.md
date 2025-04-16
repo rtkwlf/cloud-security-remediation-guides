@@ -12,7 +12,7 @@
 | **Description** | Ensure that EBS volume snapshots are deleted after defined time period |
 | **More Info** | EBS volume snapshots older than indicated should be deleted after defined time period for cost optimization |
 | **AWS Link** | https://docs.amazonaws.cn/en_us/AWSEC2/latest/UserGuide/ebs-deleting-snapshot.html |
-| **Recommended Action** | Delete the EBS snapshots past their defined expiration date, the default expiration time is 30 days |
+| **Recommended Action** | Delete the EBS snapshots past 35 days |
 
 ## Detailed Remediation Steps
 1. Log into the AWS Management Console. </br>
