@@ -11,7 +11,7 @@
 | **Category** | Virtual Machines |
 | **Description** | Ensures that the guest level diagnostics are enabled. |
 | **More Info** | Guest Level Diagnostics should be enabled to collect information about VMs processing and state of VM applications. |
-| **AZURE Link** | https://docs.microsoft.com/en-us/azure/security-center/security-center-enable-vm-agent |
+| **AZURE Link** | https://learn.microsoft.com/en-us/azure/azure-monitor/agents/diagnostics-extension-overview |
 | **Recommended Action** | Enable guest level diagnostics for all virtual machines. |
 
 ## Detailed Remediation Steps
@@ -22,5 +22,5 @@
 3. Select the corresponding virtual machine by clicking on the "Name" link.
 4. Ensure that the Virtual Machine is currently running.
 5. In the left menu pane, select "Diagnostic settings" under Monitoring.
-6. In the Diagnostic Settings Overview, select a storage account under "Pick a storage account" and then select "Enable guest-level monitoring".
-7. Repeat steps 3 - 6 for all other applicable Virtual Machines.
+6. In the Diagnostic Settings Overview, select a storage account where the collected metrics will be stored under "Pick a storage account" and then select "Enable guest-level monitoring".  A message will show up about "installing diagnostic setting extension".  Wait for another message about "Successfully installed diagnostic setting extension". 
+9. Repeat steps 3 - 8 for all other applicable Virtual Machines.
