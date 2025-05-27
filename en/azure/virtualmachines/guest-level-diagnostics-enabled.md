@@ -23,4 +23,4 @@
 4. Ensure that the Virtual Machine is currently running.
 5. In the left menu pane, select "Diagnostic settings" under Monitoring.
 6. In the Diagnostic Settings Overview, select a storage account where the collected metrics will be stored under "Pick a storage account" and then select "Enable guest-level monitoring".  A message will show up about "installing diagnostic setting extension".  Wait for another message about "Successfully installed diagnostic setting extension". 
-9. Repeat steps 3 - 8 for all other applicable Virtual Machines.
+7. Repeat steps 3 - 6 for all other applicable Virtual Machines.
