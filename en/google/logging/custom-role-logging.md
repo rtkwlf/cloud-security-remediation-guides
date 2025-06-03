@@ -16,19 +16,19 @@
 
 ## Detailed Remediation Steps
 To ensure that log alerts exist for custom role creation and changes in GCP, you should create a log-based metric and an alerting policy that monitors for these events. <br>
-1. Create a Log-Based Metric:
+Create a Log-Based Metric:
   1. Navigate to the [Log-based Metrics](https://console.cloud.google.com/logs/metrics) page in the Google Cloud Console.<br> <img src="/resources/google/logging/custom-role-logging/step1-a.png"/>
   2. On the Logs-based Metrics page, in the User-defined metrics section, click on the Filter Box, select Filter, paste the following filter pattern, and press Enter. This is to ensure that there is no such filter pattern already available.
   ```
   resource.type=iam_role AND protoPayload.methodName=google.iam.admin.v1.CreateRole OR protoPayload.methodName=google.iam.admin.v1.DeleteRole OR protoPayload.methodName=google.iam.admin.v1.UpdateRole
   ``` 
   <br> <img src="/resources/google/logging/custom-role-logging/step1-b-1.png"/><br> <img src="/resources/google/logging/custom-role-logging/step1-b-2.png"/>
+
   3. Click `Create metric` next to User-defined metrics to create a new log metric based on the filter pattern specified at the previous step. <br> <img src="/resources/google/logging/custom-role-logging/step1-c.png"/>
   4. On the "Create log-based metric" page, perform the following steps:
     - Set the `Metric Type` to `Counter`.
     - In the Details section, enter a distinctive name for your log metric, add a brief description explaining its purpose, and set the `Units` field to `1` to count matching log entries.
     - For the `Filter selection`, make sure the log scope is set to `Project logs`. Then, paste the following filter into the filter box:
-
     ```
     resource.type=iam_role AND protoPayload.methodName=google.iam.admin.v1.CreateRole OR protoPayload.methodName=google.iam.admin.v1.DeleteRole OR protoPayload.methodName=google.iam.admin.v1.UpdateRole
     ```
