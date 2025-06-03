@@ -15,13 +15,55 @@
 | **Recommended Action** | Ensure that log alerts exist for audit configuration changes. |
 
 ## Detailed Remediation Steps
-1. Log into the Google Cloud Platform Console.
-2. Scroll down the left navigation panel and select the "Logging" option under the "STACKDRIVER."</br> <img src="/resources/google/logging/audit-configuration-logging/step2.png"/>
-3. On the "Stack driver Logging" page, click on the dropdown menu below the "CREATE METRIC" and choose the "Metric type" from the menu to choose the "Audit Configuration Changes."</br> <img src="/resources/google/logging/audit-configuration-logging/step3.png"/>
-4. If the "Audit Configuration changes" contains no logs information, then the selected metric don't have logging and log alerts exist for audit configuration changes.</br> <img src="/resources/google/logging/audit-configuration-logging/step4.png"/>
-5. Repeat steps number 2 - 4 to check other "Metric type" in the accounts.</br>
-6. Navigate to the "Logging" option under the "STACKDRIVER", click on the dropdown menu below the "CREATE METRIC" and choose the "Metric type" from the menu to choose the "Audit Configuration Changes" to create a new metric for logging and log alerts.</br> <img src="/resources/google/logging/audit-configuration-logging/step6.png"/>
-7. Click on the "CREATE METRIC" at the top to create a new metric.</br> <img src="/resources/google/logging/audit-configuration-logging/step7.png"/>
-8. On the "Metric editor" tab, enter the "Name" and "Description" accordingly and enter the field name under the "Label" as per the requirements and click on the "Done" button to save the "Label."</br> <img src="/resources/google/logging/audit-configuration-logging/step8.png"/>
-9. Click on the "Create metric" button at the bottom to make the changes.</br> <img src="/resources/google/logging/audit-configuration-logging/step9.png"/>
-10. Repeat steps number 6 - 9 to ensure that log alerts exist for audit configuration changes.</br>
+1. Log in to the [Google Cloud Platform Console](console.cloud.google.com).
+2. From the top navigation bar, select the GCP project you want to work with.
+3. Navigate to the [Log-based Metrics](https://console.cloud.google.com/logs/metrics) page in the Google Cloud Console.</br> <img src="/resources/google/logging/audit-configuration-logging/step3.png"/>
+4. On the Logs-based Metrics page, within the User-defined metrics area, click in the Filter box, select Filter, and enter the following filter pattern:
+```
+resource.type=global AND protoPayload.methodName=SetIamPolicy AND protoPayload.serviceData.policyDelta.auditConfigDeltas:*
+```
+Press Enter to check if this filter already exists.</br> <img src="/resources/google/logging/audit-configuration-logging/step4.png"/>
+5. Click Create metric next to User-defined metrics to add a new log metric using the filter pattern you just entered.</br> <img src="/resources/google/logging/audit-configuration-logging/step5.png"/>
+
+6. On the log-based metric creation page, follow these steps:
+   a. Set the `Metric Type` to `Counter`.
+   b. In the Details section, enter a unique name for your log metric, add a brief description of its purpose, and set the Units field to `1` to count each matching log entry.
+   c. For the filter, make sure the log scope is set to `Project logs`. Then, paste the following filter into the filter box:
+```
+resource.type=global AND protoPayload.methodName=SetIamPolicy AND protoPayload.serviceData.policyDelta.auditConfigDeltas:*
+```
+   d. (Optional) To add labels, click + Add label and include any tags you want, then click Done.</br> <img src="/resources/google/logging/audit-configuration-logging/step6-1.png"/>
+   e. Click Create metric to finish. If successful, you’ll see a confirmation that your log metric was created and data will be available soon.
+</br> <img src="/resources/google/logging/audit-configuration-logging/step6-2.png"/>
+
+7. In the left-side menu, go to Logs-based Metrics under the Configure section.</br> <img src="/resources/google/logging/audit-configuration-logging/step7.png"/>
+8. Find your new log metric in the `User-defined metrics` list and confirm it is enabled (look for a green checkmark). Click the three dots next to the metric to open more options, then select `Create alert from metric` to set up an alerting policy based on this metric.</br> <img src="/resources/google/logging/project-ownership-logging/step8.png"/>
+9. You’ll need to define a condition for the alerting policy before it can trigger notifications. On the alerting policy setup page, follow these steps:
+   * Under New condition, enter the required details:
+     a. Set the Policy configuration mode to Builder.
+     b. Confirm that the correct metric appears in the Select a metric field; this should automatically display the metric you created earlier.
+     c. In the Transform data section, set the `Rolling window` to your preferred duration (such as 10 minutes), choose `delta` for the window function, and set `Time series aggregation` to `count`.
+     d. (Optional) To group time series by label, click in the `Time series group by` box and select a label from the list.
+     e. Click `NEXT` to proceed with the setup.
+
+</br> <img src="/resources/google/logging/project-ownership-logging/step9.png"/>
+
+  * For `Configure trigger`, follow these steps:
+    a. Set the Condition Type to Threshold.
+    b. For Alert trigger, select Any time series violates.
+    c. Set Threshold position to Above threshold.
+    d. Enter 0 as the threshold value. This will trigger an alert for every audit configuration change detected in the selected GCP project.
+    e. Enter a unique name for this condition in the Condition name field.
+    f. Click NEXT to continue with the setup.
+</br> <img src="/resources/google/logging/project-ownership-logging/step9-2.png"/>
+
+  * For notifications and naming, follow these steps:
+    1. Enable notification channels so you can receive alerts. Select the channels where you want to get notified, such as email addresses.
+    2. In the `Notification Channels` field, pick the channels you want to use for alerts and click OK to save. To add a new channel, select `Manage Notification Channels` and create one. It’s a good idea to set up more than one channel for reliability.
+    3. (Optional) For `Notify on incident closure`, decide if you want notifications when an incident closes and set the time after which an incident will close automatically if no data is received.
+    4. (Optional) Use `+ Add Label` to attach custom labels to your alert policy for better organization.
+    5. (Optional) Set the `Policy Severity Level` to help prioritize alerts.
+    6. (Optional) Add any relevant information in the `Documentation` field; this will be included in alert notifications.
+    7. Enter a clear and descriptive name for your alerting policy in the `Name the alert policy` field.
+    8. Click `NEXT` to continue.
+</br> <img src="/resources/google/logging/project-ownership-logging/step9-3.png"/> 
