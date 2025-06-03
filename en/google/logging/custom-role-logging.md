@@ -25,19 +25,21 @@ To ensure that log alerts exist for custom role creation and changes in GCP, you
   <br> <img src="/resources/google/logging/custom-role-logging/step1-b-1.png"/><br> <img src="/resources/google/logging/custom-role-logging/step1-b-2.png"/>
   3. Click `Create metric` next to User-defined metrics to create a new log metric based on the filter pattern specified at the previous step. <br> <img src="/resources/google/logging/custom-role-logging/step1-c.png"/>
   4. On the "Create log-based metric" page, perform the following steps:
-    1. Set the `Metric Type` to `Counter`.
-    2. In the Details section, enter a distinctive name for your log metric, add a brief description explaining its purpose, and set the `Units` field to `1` to count matching log entries.
-    3. For the `Filter selection`, make sure the log scope is set to `Project logs`. Then, paste the following filter into the filter box:
+    - Set the `Metric Type` to `Counter`.
+    - In the Details section, enter a distinctive name for your log metric, add a brief description explaining its purpose, and set the `Units` field to `1` to count matching log entries.
+    - For the `Filter selection`, make sure the log scope is set to `Project logs`. Then, paste the following filter into the filter box:
+
     ```
     resource.type=iam_role AND protoPayload.methodName=google.iam.admin.v1.CreateRole OR protoPayload.methodName=google.iam.admin.v1.DeleteRole OR protoPayload.methodName=google.iam.admin.v1.UpdateRole
     ```
-    4. (Optional) To add labels, click `+ Add label` and include any tags you want, then click Done.
-    5. Click `Create metric` to finish. If successful, you’ll see a confirmation that your log metric was created and data will be available shortly.<br> <img src="/resources/google/logging/custom-role-logging/step1-d.png"/>
 
-    6. In the left-side menu, go to Logs-based Metrics under the Configure section.<br> <img src="/resources/google/logging/custom-role-logging/step1-e.png"/>
-    7. Find your new log metric in the User-defined metrics list and confirm it is enabled (look for a green checkmark). Click the three dots next to the metric to open more options, then select Create alert from metric to set up an alerting policy based on this metric.<br> <img src="/resources/google/logging/custom-role-logging/step1-f.png"/>
+    - (Optional) To add labels, click `+ Add label` and include any tags you want, then click Done.
+    - Click `Create metric` to finish. If successful, you’ll see a confirmation that your log metric was created and data will be available shortly.<br> <img src="/resources/google/logging/custom-role-logging/step1-d.png"/>
 
-    8. Before you can set up an alert, you need to define a condition that will trigger the alerting policy. On the alerting policy creation page, follow these steps: 
+    - In the left-side menu, go to Logs-based Metrics under the Configure section.<br> <img src="/resources/google/logging/custom-role-logging/step1-e.png"/>
+    - Find your new log metric in the User-defined metrics list and confirm it is enabled (look for a green checkmark). Click the three dots next to the metric to open more options, then select Create alert from metric to set up an alerting policy based on this metric.<br> <img src="/resources/google/logging/custom-role-logging/step1-f.png"/>
+
+    - Before you can set up an alert, you need to define a condition that will trigger the alerting policy. On the alerting policy creation page, follow these steps: 
       * Under New condition, fill in the required details:
         1. Set the Policy configuration mode to `Builder`.
         2. Make sure the correct metric appears in the Select a metric field. This should automatically show the metric you created earlier.
