@@ -49,7 +49,7 @@ Repeat these steps for each of the following security-focused metric filters:
 
 ---
 
-### 1. Unauthorized API Calls
+### (1) Unauthorized API Calls
 
 Detects attempts to perform actions that are not authorized.
 
@@ -60,7 +60,7 @@ Detects attempts to perform actions that are not authorized.
 
 ---
 
-### 2. Sign In Without MFA
+### (2) Sign In Without MFA
 
 Identifies console logins where Multi-Factor Authentication (MFA) was not used.
 
@@ -71,7 +71,7 @@ Identifies console logins where Multi-Factor Authentication (MFA) was not used.
 
 ---
 
-### 3. Root Account Usage
+### (3) Root Account Usage
 
 Monitors for activities performed by the AWS Root user, which should be minimized.
 
@@ -82,7 +82,7 @@ Monitors for activities performed by the AWS Root user, which should be minimize
 
 ---
 
-### 4. IAM Policy Changes
+### (4) IAM Policy Changes
 
 Detects changes to IAM policies, which can indicate privilege escalation or unauthorized modifications.
 
@@ -93,7 +93,7 @@ Detects changes to IAM policies, which can indicate privilege escalation or unau
 
 ---
 
-### 5. CloudTrail Configuration Changes
+### (5) CloudTrail Configuration Changes
 
 Monitors for any modifications to CloudTrail configurations, which could indicate an attempt to hide malicious activity.
 
@@ -104,7 +104,7 @@ Monitors for any modifications to CloudTrail configurations, which could indicat
 
 ---
 
-### 6. Sign In Failures
+### (6) Sign In Failures
 
 Detects failed console login attempts, which could indicate brute-force attacks.
 
@@ -115,7 +115,7 @@ Detects failed console login attempts, which could indicate brute-force attacks.
 
 ---
 
-### 7. Disabled CMKs
+### (7) Disabled CMKs
 
 Monitors for attempts to disable or schedule deletion of AWS Key Management Service (KMS) Customer Master Keys (CMKs).
 
@@ -126,7 +126,7 @@ Monitors for attempts to disable or schedule deletion of AWS Key Management Serv
 
 ---
 
-### 8. S3 Policy Changes
+### (8) S3 Policy Changes
 
 Detects changes to S3 bucket policies, ACLs, or other configurations that could expose data.
 
@@ -137,7 +137,7 @@ Detects changes to S3 bucket policies, ACLs, or other configurations that could 
 
 ---
 
-### 9. ConfigService Changes
+### (9) ConfigService Changes
 
 Monitors for changes to AWS Config service configurations, which could impact compliance monitoring.
 
@@ -148,7 +148,7 @@ Monitors for changes to AWS Config service configurations, which could impact co
 
 ---
 
-### 10. Security Group Changes
+### (10) Security Group Changes
 
 Detects modifications to EC2 Security Groups, which can impact network access.
 
@@ -159,7 +159,7 @@ Detects modifications to EC2 Security Groups, which can impact network access.
 
 ---
 
-### 11. Network ACL Changes
+### (11) Network ACL Changes
 
 Monitors for changes to Network Access Control Lists (NACLs), which control subnet traffic.
 
@@ -170,7 +170,7 @@ Monitors for changes to Network Access Control Lists (NACLs), which control subn
 
 ---
 
-### 12. Network Gateway Changes
+### (12) Network Gateway Changes
 
 Detects changes to network gateways (Internet Gateways, Customer Gateways), which can affect network connectivity.
 
@@ -181,7 +181,7 @@ Detects changes to network gateways (Internet Gateways, Customer Gateways), whic
 
 ---
 
-### 13. Route Table Changes
+### (13) Route Table Changes
 
 Monitors for modifications to VPC Route Tables, which dictate network routing.
 
@@ -192,7 +192,7 @@ Monitors for modifications to VPC Route Tables, which dictate network routing.
 
 ---
 
-### 14. VPC Changes
+### (14) VPC Changes
 
 Detects changes to Virtual Private Cloud (VPC) configurations, including creation, deletion, and peering.
 
@@ -203,7 +203,7 @@ Detects changes to Virtual Private Cloud (VPC) configurations, including creatio
 
 ---
 
-### 15. Organizations Changes
+### (15) Organizations Changes
 
 Monitors for changes within AWS Organizations, such as account creation, policy attachment, or organizational unit modifications.
 
