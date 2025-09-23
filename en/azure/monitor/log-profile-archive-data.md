@@ -39,8 +39,9 @@ Follow these steps to configure or update diagnostic settings for the Azure Acti
 
 5.  **Configure Diagnostic Setting Details:**
     *   **Diagnostic setting name:** Enter a descriptive name for your diagnostic setting (e.g., `ActivityLogArchiveToStorage` or `ActivityLogStreamToEventHub`).
-    *   **Log categories:** Under "Log categories", select all relevant categories to ensure comprehensive logging. Based on the detection script, ensure at least the following are selected:
+    *   **Log categories:** Under "Log categories", select all relevant categories to ensure comprehensive logging. At a minimum, based on the detection script, ensure the following is selected:
         *   **Administrative** (covers 'Write', 'Delete', 'Action' operations)
+    *   **Optional - Additional categories:** Depending on your auditing and compliance requirements, you may also choose to enable the following additional log categories:
         *   **Security**
         *   **ServiceHealth**
         *   **Alert**

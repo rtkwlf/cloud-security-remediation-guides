@@ -25,7 +25,8 @@
      - **Legal hold**: Use this to lock data indefinitely until the hold is explicitly removed (no retention period required).  
    - Optionally specify the **policy scope** (container or version-level):  
      - To apply at the container level, **do not check** the box for *"Enable version-level immutability"*  
-   - (Optional) Enable the checkbox for **"Allow protected append writes to"**:  
+     - **Note:** Container-level policies apply to all blobs in the container. Use version-level immutability only when you need granular control per blob version and have versioning enabled.
+   - (Optional) Enable the radio button for **"Allow protected append writes to"**:  
      - Determines whether additional append actions will be allowed on blobs in this container.  
      - ⚠️ **Note:** This setting cannot be modified while a policy is locked.  
    - Click **"Save"** to apply the policy. </br> <img src="/resources/azure/blobservice/blob-service-immutable/step6.png"/> </br>
@@ -33,4 +34,4 @@
    - For regulatory compliance (e.g., financial records), use **Time-based retention: 2555 days (7 years)**  
    - For legal investigations, use a **Legal hold** to prevent deletion until the case is resolved  
    - For audit logging, enable **"Allow protected append writes to"** to allow appending while maintaining immutability
-7. To enforce data immutability across multiple containers, **repeat Steps 5–6** for each container containing critical or sensitive data. <br/>
+7. To enforce and verify data immutability compliance, **repeat Steps 3–6** for each container within each storage account that holds critical or sensitive data.
