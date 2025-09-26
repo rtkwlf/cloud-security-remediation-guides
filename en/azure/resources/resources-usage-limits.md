@@ -18,7 +18,7 @@
 
 1. Log in to the Microsoft Azure Management Console.
 
-2. Select for "subscriptions" in the search bar on top and select the same. </br> <img src="/resources/azure/resources/resources-usage-limits/step2.png"/>
+2. Search for "subscriptions" in the search bar at the top and select it. </br> <img src="/resources/azure/resources/resources-usage-limits/step2.png"/>
 
 3. Select your subscription by clicking on the subscription name. </br> <img src="/resources/azure/resources/resources-usage-limits/step3.png"/>
 
@@ -32,7 +32,9 @@
    - **100%+ usage**: Critical - emergency action required
    In this case, all the resources are within the acceptable usage limit. </br> <img src="/resources/azure/resources/resources-usage-limits/step6.png"/>
 
-7. For resources at 90%+ usage, click on "Resources" in the main Azure menu. </br> <img src="/resources/azure/resources/resources-usage-limits/step7.png"/>
+### Steps for Reducing Current Usage of Resources
+
+7. If any resources show 70% or higher usage, this constitutes a security misconfiguration that needs immediate attention. For resources at 90%+ usage, click on "Resources" in the main Azure menu. </br> <img src="/resources/azure/resources/resources-usage-limits/step7.png"/>
 
 8. Filter by the resource type that's approaching limits (e.g., "Virtual machines", "Storage accounts"). </br> <img src="/resources/azure/resources/resources-usage-limits/step8.png"/>
 
@@ -42,12 +44,14 @@
    - Locate network interfaces without associated VMs
    - Find public IPs not associated with any resources
 
+### Steps For Increasing Quotas of Resources
+
 10. For resources at 100% usage, return to "Usage + quotas", and click on 'edit' icon which is set as 'yes' under 'Adjustable'. </br> <img src="/resources/azure/resources/resources-usage-limits/step10.png"/>
 
 11. Click the 'Request adjustment button to submit a quota increase request. </br> <img src="/resources/azure/resources/resources-usage-limits/step11.png"/>
 
-12. For a particular resource, if the 'Adjustable' is 'no', then a support request form can be filled with business justificationcan. </br> <img src="/resources/azure/resources/resources-usage-limits/step12.png"/>
+12. For a particular resource, if the 'Adjustable' is 'no', then a support request form can be filled out with business justification. </br> <img src="/resources/azure/resources/resources-usage-limits/step12.png"/>
 
-13. If needed, an alert can be created for a particular resource type. </br> <img src="/resources/azure/resources/resources-usage-limits/step13.png"/>
+13. Create alerts to monitor usage levels and prevent future threshold breaches that would trigger this security check. </br> <img src="/resources/azure/resources/resources-usage-limits/step13.png"/>
 
-14. Repeat steps 5-13 for the other resources accordingly.
+14. Repeat steps 5-6 for other regions, and apply steps 7-13 as needed based on usage levels discovered.
