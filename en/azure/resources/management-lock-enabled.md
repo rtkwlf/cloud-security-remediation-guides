@@ -21,4 +21,4 @@
 4. In the left navigation panel, click on the "Locks" under "Settings".</br> <img src="/resources/azure/resources/management-lock-enabled/step4.png"/>
 5. If you do not see any locks enabled then the resource is not protected against advertent deletion by a managament lock.</br> <img src="/resources/azure/resources/management-lock-enabled/step5.png"/>
 6. To ensure that management lock is enabled, click the "Add" button at the top and select "Read only" from the dropdown "Lock type" in the "Add" pop up and click "OK". </br> <img src="/resources/azure/resources/management-lock-enabled/step6.png"/>
-7. Ensure all other critical resources have management lock enabled. (In this image, due to permission issues, the resource is a 'storage account' named 'blobstorecart' and not 'teststoragea001')</br> <img src="/resources/azure/resources/management-lock-enabled/step7.png"/>
+7. Ensure all other critical resources have management lock enabled. (In this image, the resource is a 'storage account' named 'blobstorecart' and not 'teststoragea001')</br> <img src="/resources/azure/resources/management-lock-enabled/step7.png"/>
