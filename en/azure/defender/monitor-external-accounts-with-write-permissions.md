@@ -24,4 +24,4 @@
 8. In the list search for the setting "External accounts with write permissions should be removed from your subscription". If it's set to "Disabled" then "External accounts Monitoring" is not enabled on the selected "Subscription". </br> <img src="/resources/azure/defender/monitor-external-accounts-with-write-permissions/step8.png"/>
 9. To enable "External accounts Monitoring" click to open the dropdown of "External accounts with write permissions should be removed from your subscription" and select the "AuditIfNotExists" option. </br> <img src="/resources/azure/defender/monitor-external-accounts-with-write-permissions/step9.png"/>
 10. Click on the "Review + save" button to make the necessary changes. </br> <img src="/resources/azure/defender/monitor-external-accounts-with-write-permissions/step10.png"/>
-11. Repeat steps number 3 - 10 to ensure ""External accounts Monitoring" is configured from the Microsoft Defender. </br>
+11. Repeat steps number 3 - 10 to ensure "External accounts Monitoring" is configured from the Microsoft Defender. </br>
