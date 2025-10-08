@@ -1,6 +1,4 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
-# AWS / EC2 / Public AMI
+# AWS / EC2 / AMI has Tags
 
 ## Quick Info
 
@@ -20,4 +18,4 @@
 3. Scroll down the left navigation panel and choose "AMIs" under "Images".</br> <img src="/resources/aws/ec2/ami-has-tags/step3.png"/>
 4. Select the "AMI" that needs to have tags. </br> <img src="/resources/aws/ec2/ami-has-tags/step4.png"/>
 5. Scroll down the page and select the "Tags" tab from the dashboard bottom panel and Click on "Manage Tags".</br> <img src="/resources/aws/ec2/ami-has-tags/step5.png"/>
-6. On Manage Tags page click on "Add Tags" and enter the key-value for the tag and Click "Save".</br><img src="/resources/aws/ec2/ami-has-tags/step6.png"/>
+6. On Manage Tags page click on "Add new tag" and enter the key-value for the tag and Click "Save".</br><img src="/resources/aws/ec2/ami-has-tags/step6.png"/>

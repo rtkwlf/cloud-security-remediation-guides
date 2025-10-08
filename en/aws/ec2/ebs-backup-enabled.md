@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AWS / EC2 / EBS Backup Enabled
 
 ## Quick Info
@@ -14,13 +12,36 @@
 | **AWS Link** | https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/new-ebs-volume-backups.html |
 | **Recommended Action** | Ensure that each EBS volumes contain at least a backup in the form of a snapshot. |
 
-## Detailed Remediation Steps
-1. Log into the AWS Management Console.
-2. Select the "Services" option and search for EC2. </br>
-3. On Amazon EC2 console, on the Elastic Block Store Volumes page, select the volume that you want to back up. </br>
-4. Then on the Actions menu, choose Create Snapshot. </br>
-5. You can search for volumes that are attached to a specific instance by entering the instance ID in the filter box. </br>
-6. Enter a description and add the appropriate tags. </br>
-7. Add a Name tag to make it easier to find the volume later. </br> 
-8. Add any other appropriate tags based on your tagging strategy. </br> 
-9. Repeat steps 3 - 8 for each EBS volume that does not have a snapshot. </br>
+### Introduction
+
+EBS volumes are critical components of many AWS workloads, storing essential data for EC2 instances and applications. Regular backups, in the form of EBS snapshots, are crucial for data protection, disaster recovery, and business continuity. Snapshots provide a point-in-time copy of your EBS volumes, allowing you to restore data in case of accidental deletion, data corruption, or other unforeseen events. Without proper backup strategies, there is a risk of data loss and extended recovery times.
+
+This guide outlines the steps to ensure that your EBS volumes are regularly backed up using snapshot creation.
+
+### Detailed Remediation Steps
+
+For ad-hoc or individual volume backups, you can create snapshots from the EC2 console by following the steps below.
+
+1.  **Navigate to Volumes:**
+    *   Open the Amazon EC2 console at [https://console.aws.amazon.com/ec2/](https://console.aws.amazon.com/ec2/).
+    *   In the navigation pane, under **Elastic Block Store**, choose **Volumes**.
+2.  **Select Volume:**
+    *   Select the EBS volume you wish to back up.
+3.  **Create Snapshot:**
+    *   Choose **Actions**, then select **Create Snapshot**.
+4.  **Configure Snapshot:**
+    *   **Description:** Enter a meaningful description for the snapshot (e.g., "Backup before application upgrade").
+    *   **Tags:** Add tags to the snapshot for better organization and management. A `Name` tag is highly recommended.
+5.  **Create:**
+    *   Choose **Create Snapshot**.
+
+### Verification
+
+To verify that your EBS volumes are being backed up, you can check the AWS console or use the AWS CLI.
+
+1.  **AWS Console Verification:**
+    *   Open the Amazon EC2 console at [https://console.aws.amazon.com/ec2/](https://console.aws.amazon.com/ec2/).
+    *   In the navigation pane, under **Elastic Block Store**, choose **Snapshots**.
+    *   Review the list of snapshots. Look for snapshots associated with your EBS volumes, checking their `Volume ID`, `Description`, and `Tags` to confirm they are the intended backups.
+
+    
