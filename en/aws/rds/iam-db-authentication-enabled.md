@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AWS / RDS / DS IAM Database Authentication Enabled
 
 ## Quick Info
