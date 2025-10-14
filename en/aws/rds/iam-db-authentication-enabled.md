@@ -1,10 +1,10 @@
-# AWS / RDS / DS IAM Database Authentication Enabled
+# AWS / RDS / RDS IAM Database Authentication Enabled
 
 ## Quick Info
 
 | | |
 |-|-|
-| **Plugin Title** | DS IAM Database Authentication Enabled |
+| **Plugin Title** | RDS IAM Database Authentication Enabled |
 | **Cloud** | AWS |
 | **Category** | RDS |
 | **Description** | Ensures IAM Database Authentication is enabled for RDS database instances to manage database access |
