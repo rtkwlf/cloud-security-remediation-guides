@@ -68,41 +68,6 @@
       }]
     }
     ```
-12. If you need to allow specific trusted/whitelisted accounts (that are configured in the plugin settings), use this example:
-    ```json
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Principal": {
-          "AWS": [
-            "arn:aws:iam::YOUR-ACCOUNT-ID:root",
-            "arn:aws:iam::TRUSTED-ACCOUNT-ID:root"
-          ]
-        },
-        "Action": [
-          "SNS:Publish",
-          "SNS:Subscribe"
-        ],
-        "Resource": "arn:aws:sns:us-east-1:YOUR-ACCOUNT-ID:topic-name"
-      }]
-    }
-    ```
-    Ensure the TRUSTED-ACCOUNT-ID matches accounts in your plugin's whitelist configuration.
-13. If you need to allow AWS service principals (like CloudWatch or EventBridge), use this example:
-    ```json
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Principal": {
-          "Service": "cloudwatch.amazonaws.com"
-        },
-        "Action": "SNS:Publish",
-        "Resource": "arn:aws:sns:us-east-1:YOUR-ACCOUNT-ID:topic-name"
-      }]
-    }
-    ```
-14. Click on "Save changes" button at the bottom of the page.
-15. Repeat steps 4-14 for all other SNS Topics that have cross-account access across all regions.
+12. Click on "Save changes" button at the bottom of the page.
+13. Repeat steps 4-12 for all other SNS Topics that have cross-account access across all regions.
 
