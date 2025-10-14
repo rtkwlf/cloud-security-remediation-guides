@@ -51,24 +51,22 @@
    - If you have whitelisted/trusted accounts, ensure only those accounts are specified
    - Remove or update "Condition" blocks that allow unintended cross-account access
    - Ensure the policy restricts access to only your account ID or explicitly trusted organization accounts
-11. Example of a secure policy that prevents cross-account access:
-    ```json
-    {
-      "Version": "2012-10-17",
-      "Statement": [{
-        "Effect": "Allow",
-        "Principal": {
-          "AWS": "arn:aws:iam::YOUR-ACCOUNT-ID:root"
-        },
-        "Action": [
-          "SNS:Publish",
-          "SNS:Subscribe"
-        ],
-        "Resource": "arn:aws:sns:us-east-1:YOUR-ACCOUNT-ID:topic-name"
-      }]
-    }
-    ```
-    This example should be followed in terms of formatting.
-12. Click on "Save changes" button at the bottom of the page.
-13. Repeat steps 4-12 for all other SNS Topics that have cross-account access across all regions.
-
+11. Example of a secure policy that prevents cross-account access:</br>
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Principal": {
+      "AWS": "arn:aws:iam::YOUR-ACCOUNT-ID:root"
+    },
+    "Action": [
+      "SNS:Publish",
+      "SNS:Subscribe"
+    ],
+    "Resource": "arn:aws:sns:us-east-1:YOUR-ACCOUNT-ID:topic-name"
+  }]
+}
+```
+12. Click on "Save changes" button at the bottom of the page.</br>
+13. Repeat steps 4-12 for all other SNS Topics that have cross-account access across all regions.</br>
