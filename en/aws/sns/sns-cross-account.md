@@ -68,6 +68,7 @@
       }]
     }
     ```
+    This example should be followed in terms of formatting.
 12. Click on "Save changes" button at the bottom of the page.
 13. Repeat steps 4-12 for all other SNS Topics that have cross-account access across all regions.
 
