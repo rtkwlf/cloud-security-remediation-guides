@@ -4,7 +4,7 @@
 
 | | |
 |-|-|
-| **Plugin Title** | SNS Topic HTTP Protocol Restriction |
+| **Plugin Title** | SNS Topic No HTTP Protocol |
 | **Cloud** | AWS |
 | **Category** | SNS |
 | **Description** | Ensures SNS topics do not allow HTTP protocol |

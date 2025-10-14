@@ -4,7 +4,7 @@
 
 | | |
 |-|-|
-| **Plugin Title** | SNS Cross Account Access |
+| **Plugin Title** | SNS Cross Account |
 | **Cloud** | AWS |
 | **Category** | SNS |
 | **Description** | Ensures SNS policies disallow cross-account access |
@@ -31,7 +31,7 @@
    - **StringEquals** with **aws:SourceAccount**: Should contain only your account ID or whitelisted account IDs
    - **StringEquals** with **aws:PrincipalAccount**: Should contain only your account ID or whitelisted account IDs
    - **ArnLike** with **aws:PrincipalArn** or **aws:SourceArn**: Should reference only your account or whitelisted accounts
-   
+
    Avoid conditions that could inadvertently grant broad cross-account access.
 8. **Important Note on Wildcards**: If the Principal is set to "*" (wildcard), this is only acceptable when accompanied by a valid condition that restricts access to your account. For example:
    ```json
@@ -105,7 +105,4 @@
     ```
 14. Click on "Save changes" button at the bottom of the page.
 15. Repeat steps 4-14 for all other SNS Topics that have cross-account access across all regions.
-
-
-
 
