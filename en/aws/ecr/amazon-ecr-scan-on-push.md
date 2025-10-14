@@ -1,10 +1,10 @@
-# AWS / ECR / ECR Image Vulnerability
+# AWS / ECR / Amazon ECR Scan on Push
 
 ## Quick Info
 
 | | |
 |-|-|
-| **Plugin Title** | ECR Image Vulnerability |
+| **Plugin Title** | Amazon ECR Scan on Push |
 | **Cloud** | AWS |
 | **Category** | ECR |
 | **Description** | Ensures Amazon ECR container images are automatically scanned for security vulnerabilities after being pushed to a repository |

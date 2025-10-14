@@ -1,10 +1,10 @@
-# AWS / SNS / SNS Topic No HTTP Policy
+# AWS / SNS / SNS Topic HTTP Protocol Restriction
 
 ## Quick Info
 
 | | |
 |-|-|
-| **Plugin Title** | SNS Topic No HTTP Protocol |
+| **Plugin Title** | SNS Topic HTTP Protocol Restriction |
 | **Cloud** | AWS |
 | **Category** | SNS |
 | **Description** | Ensures SNS topics do not allow HTTP protocol |

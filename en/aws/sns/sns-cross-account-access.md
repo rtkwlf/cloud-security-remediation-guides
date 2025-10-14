@@ -1,10 +1,10 @@
-# AWS / SNS / SNS Cross Account
+# AWS / SNS / SNS Cross Account Access
 
 ## Quick Info
 
 | | |
 |-|-|
-| **Plugin Title** | SNS Cross Account |
+| **Plugin Title** | SNS Cross Account Access |
 | **Cloud** | AWS |
 | **Category** | SNS |
 | **Description** | Ensures SNS policies disallow cross-account access |
