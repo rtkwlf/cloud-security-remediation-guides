@@ -1,4 +1,4 @@
-# AWS / Fraud Detector / Fraud Detector Data Encrypted
+# AWS / AI & ML / Fraud Detector Data Encrypted
 
 ## Quick Info
 
