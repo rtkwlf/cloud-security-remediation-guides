@@ -7,10 +7,10 @@
 | **Plugin Title** | EBS Volumes Recent Snapshots |
 | **Cloud** | AWS |
 | **Category** | EC2 |
-| **Description** | Ensures EBS volumes are in use and attached to EC2 instances |
-| **More Info** | EBS volumes should be deleted if the parent instance has been deleted to prevent accidental exposure of data. |
-| **AWS Link** | https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-lifecycle.html |
-| **Recommended Action** | Delete the unassociated EBS volume. |
+| **Description** | Ensures that EBS volume has had a snapshot within the last 7 days |
+| **More Info** | EBS volumes without recent snapshots may be at risk of data loss or recovery issues. |
+| **AWS Link** | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html |
+| **Recommended Action** | Create a new snapshot for EBS volume weekly. |
 
 ### Introduction
 
