@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AZURE / Key Vault / Key Expiration Enabled
 
 ## Quick Info
@@ -18,12 +16,11 @@
 1. Log into the Microsoft Azure Management Console.
 2. Select the "Search resources, services, and docs" option at the top and search for Key Vault . </br> <img src="/resources/azure/keyvault/key-expiration-enabled/step2.png"/>
 3. On the "Key vault" page, select the "Key Vault" for which keys need to be verified.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step3.png"/>
-4. On the "Key vaults-test-vault-azure" page, scroll down the left navigation panel and choose the "Keys" option.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step4.png"/>
-5. On the "Key vaults-test-vault-azure - Keys" page, select the key and check for the "Expiration Date". If no "Expiration Date" is showing then the select "Key" do not have "Key Expiration Enabled."</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step5.png"/>
-6. Repeat steps number 2 - 5 to verify other "Keys" in the "Key vaults."</br>
-7. Navigate to the "Key vault", scroll down the left naviagtion panel and choose the "Keys" option.</br>  <img src="/resources/azure/keyvault/key-expiration-enabled/step7.png"/>
-8. Select the "Key" which needs to have "Key Expiration Enabled" by clicking on the "Name" as a link option. </br>  <img src="/resources/azure/keyvault/key-expiration-enabled/step8.png"/>
-9. On the "Key vaults - Keys" page click on the "Current Version" of the selected key.</br>  <img src="/resources/azure/keyvault/key-expiration-enabled/step9.png"/>
-10. On the selected "key" page, click on the "Activation Date" and select the "Date and Time" accordingly. Select the "Set expiration date" and "Time" as per the requirements under the "Settings" tab.</br>  <img src="/resources/azure/keyvault/key-expiration-enabled/step10.png"/>
-11. Click on the "Save" button at the top to make the changes.</br>  <img src="/resources/azure/keyvault/key-expiration-enabled/step11.png"/>
-12. Repeat steps number 7 - 11 to enable "Key Expiration" for all the keys in the account.</br>
+4. Scroll down and click "Keys" from the navigation pane on the left. Then, from the list of keys, select key with no expiration date under "Expiration date" column.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step4.png"/>
+5. In the key versions pane that opens, click "Rotation Policy" button at the top.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step5.png"/>
+6. In the Rotation policy pane, click on the Expiry time textbox and enter 28. From the units dropdown next to the textbox, select "days".</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step6.png"/>
+7. Under the Rotation section, "Enable auto rotation" by selecting the "Enabled" radio button.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step7.png"/>
+8. Select "Automatically renew at a given time after creation" for "Rotation option".
+9. For "Rotation time" enter 18 and select "days" as the unit of time.
+10. Finally, hit "Save" at the top of the pane to complete the changes.</br> <img src="/resources/azure/keyvault/key-expiration-enabled/step8.png"/>
+11. Repeat step number 3 - 10 for all other key vaults and keys without expiration date.
