@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AWS / IAM / IAM Roles Has Tags
 
 ## Quick Info
@@ -16,9 +14,9 @@
 
 ## Detailed Remediation Steps
 1. Log into the AWS Management Console.
-2. Select the "Services" option and search for IAM. </br><img src="/resources/aws/iam/iam-roles-has-tags/step2.png"/>
-3. On the left navigation panel and choose "Roles". </br><img src="/resources/aws/iam/iam-roles-has-tags/step3.png"/>
-4. Select the Role from the Roles List for which you want to add tags. </br><img src="/resources/aws/iam/iam-roles-has-tags/step4.png"/>
-5. On the "Summary" page Choose "Tags" from the navigation panel. Under the "Tags" tab Click on "Manage Tags" button.</br><img src="/resources/aws/iam/iam-roles-has-tags/step5.png"/>
-6. On "Manage Tags" page click on Click on "Add Tags" then enter key value pair for the tags and Click "Save changes" button.</br><img src="/resources/aws/iam/iam-roles-has-tags/step6.png"/>
+2. Select the "Services" option and search for IAM. </br><img src="/resources/aws/iam/iam-role-has-tags/step2.png"/>
+3. On the left navigation panel and choose "Roles". </br><img src="/resources/aws/iam/iam-role-has-tags/step3.png"/>
+4. Select the Role from the Roles List for which you want to add tags. </br><img src="/resources/aws/iam/iam-role-has-tags/step4.png"/>
+5. On the "Summary" page Choose "Tags" from the navigation panel. Under the "Tags" tab Click on "Manage Tags" button.</br><img src="/resources/aws/iam/iam-role-has-tags/step5.png"/>
+6. On "Manage Tags" page click on Click on "Add Tags" then enter key value pair for the tags and Click "Save changes" button.</br><img src="/resources/aws/iam/iam-role-has-tags/step6.png"/>
 
