@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AZURE / Log Alerts / Security Policy Alerts Enabled
 
 ## Quick Info
@@ -11,19 +9,41 @@
 | **Category** | Log Alerts |
 | **Description** | Ensures Activity Log alerts for create or update Security Policy Rule events are enabled |
 | **More Info** | Monitoring for create or update Security Policy Rule events gives insight into policy changes and may reduce the time it takes to detect suspicious activity. |
-| **AZURE Link** | https://docs.microsoft.com/en-us/azure/azure-monitor/platform/activity-log-alerts |
+| **AZURE Link** | https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-types |
 | **Recommended Action** | Add a new log alert to the Alerts service that monitors for Security Policy Rule create or update events. |
 
 ## Detailed Remediation Steps
 
-1. Log into the Microsoft Azure Management Console.
-2. Select the "Search resources, services, and docs" option at the top and search for Alerts. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step2.png"/>
-3. On the "Alerts" page, click on the "Manage alert rules" at the top panel.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step3.png"/>
-4. On the "Rules" page, scroll down the page and check the "Target Resource Type" and check if there is any rules for "Security Policy Alerts". If there is no "Alerts" configured then "Activity Log Alerts" for the create or update "Security Policy Rule" events are not enabled.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step4.png"/>
-5. Repeat steps number 2 - 4 to check other Azure accounts.</br>
-6. Navigate to the "Alerts" and click on the "New alert rule" at the top.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step6.png"/>
-7. On the "Create rule" page, click on the "Select" option under the "Resources" and search for "Security Policy (policies)" from the "Filter by resource type" and select the "Resource" accordingly.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step7.png"/>
-8. On the "Create rule" page, click on the "Add" option under the "Condition" and select "All Security Operations" from the options and click on the "Done" option at the bottom of the tab.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step8.png"/>
-9. Under the "Actions", select the "Action group" or "Create action group" accordingly.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step9.png"/>
-10. Enter the "Alert rule name" and "Description" under the "Alert Details" and click on the "Yes" button under the "Enable rule upon creation" to quickly enable the "Security Policy Alerts". Click on the "Create alert rule" button at the bottom to create a rule.</br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step10.png"/>
-11. Repeat steps number 6 - 10 to add a new log alert to the Alerts service that monitors for Security Policy Rule create or update events.</br>
+#### Start the Alert Creation
+
+1. Log in to the [Azure Portal](https://portal.azure.com/).
+2. Search for **Monitor** in the top search bar and select it. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step2.png"/>
+3. In the left-hand menu, select **Alerts**, then click **+ Create** and select **Alert rule**. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step6.png"/>
+
+#### Set the Scope
+
+1. On the **Scope** tab, under **Select a resource** pane. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step7.png"/>, Filter by your **Subscription**.
+3. For **Resource type**, select **Network security groups** (or select the entire subscription to monitor all NSGs within it).
+4. Click **Apply**.
+
+#### Configure the Condition
+
+1. Select the **Condition** tab and click **See all signals**. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step8.png"/>
+2. Search for and select the signal: **Create or Update Security Rule (Microsoft.Network/networkSecurityGroups/securityRules/write)** and click **Apply**.
+3. In the **Alert logic** pane, set the following: </br> <!-- TODO: Add screenshot of the Configure signal logic pane -->
+   - **Event level**: Select **All** (or specific levels such as Informational or Warning).
+   - **Status**: Select **All Selected** (to monitor all changes).
+   - **Event initiated by**: Leave as **All services and users**.
+
+#### Link an Action Group
+
+1. Go to the **Actions** tab. </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step9.png"/>
+2. Click **Use action groups** to choose an existing group, or **Use quick actions** to set up a new one (e.g., to send an email or SMS notification) and click **Select**.
+
+#### Finalise Details
+
+1. On the **Details** tab: </br> <img src="/resources/azure/logalerts/security-policy-alerts-enabled/step10.png"/>
+2. Select a **Resource group** where the alert rule itself will be stored.
+3. Provide an **Alert rule name** (e.g., `NSG-Rule-Change-Alert`) and a **Alert rule description**.
+4. Under **Advanced details**, check **Enable alert rule upon creation** to activate the alert immediately.
+5. Click **Review + create**, then click **Create**.
