@@ -18,10 +18,10 @@
 
 1. Log in to the AWS Management Console.
 2. Select Services and search for IAM.  
-    <img src="/resources/aws/iam/iam-policies-present/step1.png"/>
+    <img src="/resources/aws/iam/iam-user-not-in-use/step1.png"/>
 3. In the IAM dashboard, click on Users from the left navigation panel.  
-    <img src="/resources/aws/iam/iam-policies-present/step2.png"/>
+    <img src="/resources/aws/iam/iam-user-not-in-use/step2.png"/>
 4. For each user, go to the Access Advisor tab to review the last accessed date and identify accounts that have not been used recently.
 5. For inactive accounts, choose to either delete the user or disable their access by removing passwords and deactivating access keys.  
-    <img src="/resources/aws/iam/iam-policies-present/step3.png"/>
+    <img src="/resources/aws/iam/iam-user-not-in-use/step3.png"/>
 6. Confirm changes to disable access for each inactive user. Repeat for other IAM accounts as necessary.

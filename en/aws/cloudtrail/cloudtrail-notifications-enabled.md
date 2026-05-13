@@ -17,11 +17,11 @@
 ## Detailed Remediation Steps
 1. Sign in to the AWS Management Console.
 2. Navigate to Amazon [CloudTrail console](https://console.aws.amazon.com/cloudtrail/).
-3. In the navigation panel, under CloudTrail, choose Trails.</br><img src="/resources/aws/cloudtrail/cloudtrail-data-events/step3.png"/>
+3. In the navigation panel, under CloudTrail, choose Trails.</br><img src="/resources/aws/cloudtrail/cloudtrail-notifications-enabled/step3.png"/>
 4. Click on the name of the Amazon CloudTrail trail that you want to configure.
-5. In the General details section, choose Edit and perform the following operations:</br><img src="/resources/aws/cloudtrail/cloudtrail-delivery-failing/step5.png"/>
-   a.  Check Enable SNS notification delivery, to be notified each time a log is delivered to your bucket.</br><img src="/resources/aws/cloudtrail/cloudtrail-delivery-failing/step5a.png"/>
-   b. Select New under Create a new SNS topic to create a new Amazon SNS topic and associate it with the selected trail.</br><img src="/resources/aws/cloudtrail/cloudtrail-delivery-failing/step5a.png"/>
+5. In the General details section, choose Edit and perform the following operations:</br><img src="/resources/aws/cloudtrail/cloudtrail-notifications-enabled/step5.png"/>
+   a.  Check Enable SNS notification delivery, to be notified each time a log is delivered to your bucket.</br><img src="/resources/aws/cloudtrail/cloudtrail-notifications-enabled/step5a.png"/>
+   b. Select New under Create a new SNS topic to create a new Amazon SNS topic and associate it with the selected trail.</br><img src="/resources/aws/cloudtrail/cloudtrail-notifications-enabled/step5a.png"/>
    c. Provide a unique name for the new topic in the SNS topic box.
    d. Click Save changes to apply the changes. The new Amazon SNS topic will get permissions to receive notifications whenever a trail log file is delivered to the target S3 bucket.
 6. Navigate to Amazon [SNS console](https://console.aws.amazon.com/sns/).
