@@ -70,10 +70,11 @@ This rule checks that every Amazon Bedrock custom model is encrypted at rest usi
 
 1. Record the non-compliant model's name, base model identifier, training data S3 URI, output S3 URI, hyperparameters, and service role ARN before proceeding.
 2. Run the following command to delete the non-compliant model, replacing `<model-name-or-arn>` with the model's name or ARN:
-
+Example:
 ```bash
 aws bedrock delete-custom-model \
-  --model-identifier <model-name-or-arn>
+  --model-identifier test-model
+(no output, HTTP 200)
 ```
 
 3. Confirm the command returns HTTP 200 with no output, indicating successful deletion.
