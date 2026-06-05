@@ -65,19 +65,12 @@ This rule checks that every Amazon Bedrock custom model is encrypted at rest usi
 
 #### Delete the Non-Compliant Custom Model
 
-> ⚠️ **Warning** 
-> Deleting a custom model is irreversible. All training data, hyperparameters, and job configuration must be recorded before deletion so the model can be recreated.
+> ⚠️ **Warning:** Deleting a custom model is irreversible. All training data, hyperparameters, and job configuration must be recorded before deletion so the model can be recreated.
 
-1. Record the non-compliant model's name, base model identifier, training data S3 URI, output S3 URI, hyperparameters, and service role ARN before proceeding.
-2. Run the following command to delete the non-compliant model, replacing `<model-name-or-arn>` with the model's name or ARN:
-Example:
-```bash
-aws bedrock delete-custom-model \
-  --model-identifier test-model
-(no output, HTTP 200)
-```
-
-3. Confirm the command returns HTTP 200 with no output, indicating successful deletion.
+1. Open the Amazon Bedrock console at [https://console.aws.amazon.com/bedrock](https://console.aws.amazon.com/bedrock). </br> <img src="/resources/aws/ai&ml/custom-model-encryption-enabled/step-01.png"/>
+2. In the left navigation pane, choose **Custom models** . </br> <img src="/resources/aws/ai&ml/custom-model-encryption-enabled/step-02.png"/>
+3. On the **Custom models** page, locate the non-compliant model. Before proceeding, record its name, base model identifier, training data S3 URI, output S3 URI, hyperparameters, and service role ARN. Select the radio button, choose delete from **Action** menu. </br> <img src="/resources/aws/ai&ml/custom-model-encryption-enabled/step-03.png"/>
+4. Confirm the model no longer appears in the **Custom models** list, indicating successful deletion.
 
 #### Create a New Model Customization Job with KMS Encryption
 
