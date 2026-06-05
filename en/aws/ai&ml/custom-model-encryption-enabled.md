@@ -18,10 +18,6 @@
 
 This rule checks that every Amazon Bedrock custom model is encrypted at rest using a KMS key that meets or exceeds a configurable desired encryption level (`awskms`, `awscmk`, `externalcmk`, or `cloudhsm`). Because the encryption key is set immutably at job-creation time via `customModelKmsKeyId`, a non-compliant model cannot be re-encrypted in place and must be deleted and recreated with the correct customer managed KMS key.
 
-## Warning
-
-> [WARNING] **Warning:** Remediation involves permanent deletion of the existing custom model (irreversible data loss risk) and re-running a potentially long-running training job, causing model unavailability until the new job completes.
-
 ## Remediation Steps
 
 #### Create a Customer Managed KMS Key and Attach Key Policy
@@ -69,7 +65,8 @@ This rule checks that every Amazon Bedrock custom model is encrypted at rest usi
 
 #### Delete the Non-Compliant Custom Model
 
-> [WARNING] **Warning:** Deleting a custom model is irreversible. All training data, hyperparameters, and job configuration must be recorded before deletion so the model can be recreated.
+> ⚠️ **Warning** 
+> Deleting a custom model is irreversible. All training data, hyperparameters, and job configuration must be recorded before deletion so the model can be recreated.
 
 1. Record the non-compliant model's name, base model identifier, training data S3 URI, output S3 URI, hyperparameters, and service role ARN before proceeding.
 2. Run the following command to delete the non-compliant model, replacing `<model-name-or-arn>` with the model's name or ARN:
