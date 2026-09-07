@@ -37,6 +37,6 @@ This guide provides step-by-step instructions to rotate the server certificate o
 4. Check the box to the left of the instance you wish to modify. </br> <img src="/resources/aws/documentdb/documentdb-cluster-instance-certificate-rotation/step-4.png"/>
 5. Choose **Actions**, and then choose **Modify**. </br> <img src="/resources/aws/documentdb/documentdb-cluster-instance-certificate-rotation/step-5.png"/>
 6. In the **Modify instance** pane, under **Certificate authority**, select a new server certificate (`rds-ca-rsa2048-g1`, `rds-ca-rsa4096-g1`, or `rds-ca-ecc384-g1`). </br> <img src="/resources/aws/documentdb/documentdb-cluster-instance-certificate-rotation/step-6.png"/>
-7. Choose **Continue** to see a summary of your changes.
+7. Choose **Continue** to see a summary of your changes. </br> <img src="/resources/aws/documentdb/documentdb-cluster-instance-certificate-rotation/step-7.png"/>
 8. Under **Scheduling of modifications**, choose to apply the modification immediately or during the next maintenance window.
 9. Choose **Modify instance** to complete the update. </br> <img src="/resources/aws/documentdb/documentdb-cluster-instance-certificate-rotation/step-9.png"/>

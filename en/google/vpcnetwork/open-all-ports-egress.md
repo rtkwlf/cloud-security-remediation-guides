@@ -21,6 +21,6 @@
 3. On the "Firewall rules" page, select the "Firewall rule" which needs to be verified if it allows egress to all port and protocols. </br> <img src="/resources/google/vpcnetwork/open-all-ports-egress/step3.png"/>
 4. On the selected "Firewall rules", if all ports are open to the public then the selected "Firewall rule" is not as per the best standards. </br> <img src="/resources/google/vpcnetwork/open-all-ports-egress/step4.png"/>
 5. Repeat steps number 2 - 4 to verify another "Firewall rule" in the network.</br>
-6. Navigate to "VPC network" and choose the "Firewall rules" option under the "Networking" and select the "Firewall rule" which needs to restrict outbound traffic to known IP addresses.</br> <img src="/resources/google/vpcnetwork/open-all-ports-egress/step3.png"/>
+6. Navigate to "VPC network" and choose the "Firewall rules" option under the "Networking" and select the "Firewall rule" which needs to restrict outbound traffic to known IP addresses.</br> <img src="/resources/google/vpcnetwork/open-all-ports-egress/step6.png"/>
 7. On the "Firewall rules" page, click on the "Edit" button at the top and enter the "Destination IP ranges" and select the "Specified protocols and ports" as per the requirements then click on the "Save" button at the bottom to make the changes</br> <img src="/resources/google/vpcnetwork/open-all-ports-egress/step7.png"/>
 8. Repeat steps number 6 - 8 to restrict ports to known IP addresses.</br> 

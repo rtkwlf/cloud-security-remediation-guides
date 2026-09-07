@@ -29,5 +29,5 @@
 12. On the "Define key administrative permissions" page select the "IAM users" and roles who can administer the new "KMS key" through the KMS API. Click on the "Next" button at the bottom to continue the new "KMS key" process.</br> <img src="/resources/aws/kms/kms-default-key-usage/step12.png"/>
 13. On the "Define key usage permissions" page select the IAM users and roles that can use the CMK to encrypt and decrypt data with the "AWS KMS API" and click on the "Next" button.<br> <img src="/resources/aws/kms/kms-default-key-usage/step13.png"/>
 14. On the "Review and edit key policy" page review the policy and click on the "Finish" button to create a new "KMS key" which can be used to encrypt/decrypt the data.</br> <img src="/resources/aws/kms/kms-default-key-usage/step14.png"/>
-15. Replace the "Default KMS key" with newly created "Customer managed key".</br>
+15. Replace the "Default KMS key" with newly created "Customer managed key".</br> <img src="/resources/aws/kms/kms-default-key-usage/step15.png"/>
 16. Repeat step number 9 - 14 to avoid using the default KMS key for all other resources.</br>
