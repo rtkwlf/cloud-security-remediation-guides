@@ -19,6 +19,6 @@
 2. Select the "Services" option and search for "ElastiCache" and Click on "ElastiCache". </br> <img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step2.png"/>
 3. On "ElastiCache Dashboard" page Click on Redis or MemCached Cluster according to your cluster type from left navigation panel. </br> <img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step3.png"/>
 4. On Redis/Memcached Clusters list page Click on the Cluster Name which needs to have tags. </br><img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step4.png"/>
-5. On Cluster details page choose "Tags" tab from navigation panel on the bottom of page. </br><img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step7.png"/>
+5. On Cluster details page choose "Tags" tab from navigation panel on the bottom of page. </br><img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step5.png"/>
 6. Under the "Tags" tab Click on "Manage Tags" button. </br><img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step6.png"/>
 7. On manage tags popup Click on "Add new tag" button. Enter the key-value for tag and Click "Apply" button to save the changes. </br><img src="/resources/aws/elasticache/elasticache-cluster-has-tags/step7.png"/>
