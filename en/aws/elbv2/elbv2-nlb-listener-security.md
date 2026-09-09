@@ -1,3 +1,17 @@
+# AWS / ELBv2 / ELBv2 NLB Listener Security
+
+## Quick Info
+
+| | |
+|-|-|
+| **Plugin Title** | ELBv2 NLB Listener Security |
+| **Cloud** | AWS |
+| **Category** | ELBv2 |
+| **Description** | Ensures that AWS Network Load Balancers have secured listener configured. |
+| **More Info** | AWS Network Load Balancer should have TLS protocol listener configured to terminate TLS traffic. |
+| **AWS Link** | https://docs.amazonaws.cn/en_us/elasticloadbalancing/latest/network/create-tls-listener.html |
+| **Recommended Action** | Attach TLS listener to AWS Network Load Balancer |
+
 ## Introduction
 
 A Network Load Balancer listener accepts incoming traffic on a configured port and protocol. Without a TLS listener, traffic may not be encrypted in transit and the Network Load Balancer cannot terminate TLS connections.

@@ -1,3 +1,17 @@
+# AWS / ELBv2 / ELBv2 Unhealthy Instances
+
+## Quick Info
+
+| | |
+|-|-|
+| **Plugin Title** | ELBv2 Unhealthy Instances |
+| **Cloud** | AWS |
+| **Category** | ELBv2 |
+| **Description** | Ensures that ELBv2 have healthy instances attached |
+| **More Info** | ELBs should have healthy instances to ensure proper load balancing and availability. Unhealthy instances can result in degraded performance or service disruptions. |
+| **AWS Link** | https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html |
+| **Recommended Action** | Investigate and resolve the health issues with the instances attached to the ELB. |
+
 ## Introduction
 
 A load balancer distributes incoming traffic across registered targets. These targets should remain healthy to ensure successful traffic routing and service availability. 
