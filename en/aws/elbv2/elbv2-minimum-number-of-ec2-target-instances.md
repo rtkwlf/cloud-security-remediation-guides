@@ -1,3 +1,17 @@
+# AWS / ELBv2 / ELBv2 Minimum Number of EC2 Target Instances
+
+## Quick Info
+
+| | |
+|-|-|
+| **Plugin Title** | ELBv2 Minimum Number of EC2 Target Instances |
+| **Cloud** | AWS |
+| **Category** | ELBv2 |
+| **Description** | Ensures that there is a minimum number of two healthy target instances associated with each AWS ELBv2 load balancer. |
+| **More Info** | There should be a minimum number of two healthy target instances associated with each AWS ELBv2 load balancer to ensure fault tolerance. |
+| **AWS Link** | https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html |
+| **Recommended Action** | Associate at least two healthy target instances to AWS ELBv2 load balancer |
+
 ## Introduction
 
 A load balancer distributes incoming traffic across registered EC2 targets. If fewer than two EC2 targets are healthy, the service may lack fault tolerance and become unavailable when one target fails.
