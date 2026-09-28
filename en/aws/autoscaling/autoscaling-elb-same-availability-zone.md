@@ -1,4 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
 
 # AWS / AutoScaling / AutoScaling ELB Same Availability Zone
 
