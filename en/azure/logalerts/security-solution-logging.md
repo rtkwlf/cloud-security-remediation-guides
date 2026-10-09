@@ -1,5 +1,3 @@
-[![CloudSploit](https://cloudsploit.com/img/logo-new-big-text-100.png "CloudSploit")](https://cloudsploit.com)
-
 # AZURE / Log Alerts / Security Solution Logging
 
 ## Quick Info
@@ -17,13 +15,17 @@
 ## Detailed Remediation Steps
 
 1. Log into the Microsoft Azure Management Console.
-2. Select the "Search resources, services, and docs" option at the top and search for Alerts. </br> <img src="/resources/azure/logalerts/security-solution-logging/step2.png"/>
-3. On the "Alerts" page, click on the "Manage alert rules" at the top panel.</br> <img src="/resources/azure/logalerts/security-solution-logging/step3.png"/>
-4. On the "Rules" page, scroll down the page and check the "Target Resource Type" and check if there is any rules for "Security Solutions (securitySolutions)". If there is no "Alerts" configured then "Security Solutions (securitySolutions)" for the create or update and delete "Security Solutions (securitySolutions)" events are not enabled.</br> <img src="/resources/azure/logalerts/security-solution-logging/step4.png"/>
-5. Repeat steps number 2 - 4 to check other Azure accounts.</br>
-6. Navigate to the "Alerts" and click on the "New alert rule" at the top.</br> <img src="/resources/azure/logalerts/security-solution-logging/step6.png"/>
-7. On the "Create rule" page, click on the "Select" option under the "Resources" and search for "Security Solutions (securitySolutions)" from the "Filter by resource type" and select the "Resource" accordingly.</br> <img src="/resources/azure/logalerts/security-solution-logging/step7.png"/>
-8. On the "Create rule" page, click on the "Add" option under the "Condition" and select "All Security operations" from the options and click on the "Done" option at the bottom of the tab.</br> <img src="/resources/azure/logalerts/security-solution-logging/step8.png"/>
-9. Under the "Actions", select the "Action group" or "Create action group" accordingly.</br> <img src="/resources/azure/logalerts/security-solution-logging/step9.png"/>
-10. Enter the "Alert rule name" and "Description" under the "Alert Details" and click on the "Yes" button under the "Enable rule upon creation" to quickly enable the "Security Solutions (securitySolutions)". Click on the "Create alert rule" button at the bottom to create a rule.</br> <img src="/resources/azure/logalerts/security-solution-logging/step10.png"/>
-11. Repeat steps number 6 - 10 to add  a new log alert to the Alerts service that monitors for Security Solution create or update and delete events.</br>
+2. In the search bar at the top, search for **Monitor** and select it. </br> <img src="/resources/azure/logalerts/security-solution-logging/step2.png"/>
+3. In the left pane, select **Alerts**, then click **+ Create** and select **Alert rule**. </br> <img src="/resources/azure/logalerts/security-solution-logging/step3.png"/>
+4. On the **Select a resource** pane, filter by your **Subscription** and select the target subscription. Leave the **Resource type** filter blank or set to **All** - do not attempt to filter by Security Solutions here, as it is a legacy provider that may not appear. Click **Apply**. </br> <img src="/resources/azure/logalerts/security-solution-logging/step4.png"/>
+5. On the **Condition** tab, click **See all signals**. In the **Select a signal** pane, search for and select the following operations:
+   - **Create or Update Security Solutions (Microsoft.Security/securitySolutions/write)**
+   - **Delete Security Solutions (Microsoft.Security/securitySolutions/delete)**
+   - If the above signals do not appear, select **All Administrative operations** and manually set the **Operation name** to `Microsoft.Security/securitySolutions/write` (for create/update) or `Microsoft.Security/securitySolutions/delete` (for delete). </br> <img src="/resources/azure/logalerts/security-solution-logging/step5.png"/>
+6. In the **Alert logic** section, set the following:
+   - **Event level**: Select **All** (or specific levels such as Informational or Warning).
+   - **Status**: Select **All** (to monitor all changes).
+   - **Event initiated by**: Leave as **All services and users**. </br> <img src="/resources/azure/logalerts/security-solution-logging/step6.png"/>
+7. On the **Actions** tab, click **Use action groups** to choose an existing group. </br> <img src="/resources/azure/logalerts/security-solution-logging/step7.png"/>
+8. On the **Details** tab, select a **Resource group** where the alert rule itself will be stored. Provide an **Alert rule name** (e.g., `Alert - Security Solution Changes`) and an **Alert rule description**. </br> <img src="/resources/azure/logalerts/security-solution-logging/step8.png"/>
+9. Click **Review + create**, select **Enable upon creation** to activate the alert immediately, then click **Create**. </br> <img src="/resources/azure/logalerts/security-solution-logging/step9.png"/>
